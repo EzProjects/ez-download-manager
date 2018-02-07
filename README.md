@@ -29,6 +29,7 @@ thin, thin, super thin
   * You can set a Retry Policy
 
      ``` java
+        String downObjId = UUID.randomUUID().toString();
         Uri downloadUri = Uri.parse("https://github.com/Genymobile/gnirehtet/releases/download/v2.1/gnirehtet-rust-linux64-v2.1.zip");
         Uri destinationUri = Uri.parse(this.getExternalCacheDir().toString() + "/test.zip");
         downloadRequest = new EzDownloadRequest(downloadUri);
