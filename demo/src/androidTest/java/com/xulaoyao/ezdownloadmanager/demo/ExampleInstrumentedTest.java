@@ -1,4 +1,4 @@
-package com.xulaoyao.ezdownloadmanager;
+package com.xulaoyao.ezdownloadmanager.demo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.xulaoyao.ezdownloadmanager", appContext.getPackageName());
+        assertEquals("com.xulaoyao.ezdownloadmanager.demo", appContext.getPackageName());
     }
 }

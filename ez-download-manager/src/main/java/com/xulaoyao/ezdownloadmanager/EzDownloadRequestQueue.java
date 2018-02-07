@@ -59,8 +59,8 @@ public class EzDownloadRequestQueue {
         public void postDownloadComplete(final EzDownloadRequest request) {
             mCallBackExecutor.execute(new Runnable() {
                 public void run() {
-                    if (request.getStatusListener() != null) {
-                        request.getStatusListener().onDownloadComplete(request);
+                    if (request.getDownloadResponseListener() != null) {
+                        request.getDownloadResponseListener().onDownloadComplete(request);
                     }
                 }
             });
@@ -69,8 +69,8 @@ public class EzDownloadRequestQueue {
         public void postDownloadFailed(final EzDownloadRequest request, final int errorCode, final String errorMsg) {
             mCallBackExecutor.execute(new Runnable() {
                 public void run() {
-                    if (request.getStatusListener() != null) {
-                        request.getStatusListener().onDownloadFailed(request, errorCode, errorMsg);
+                    if (request.getDownloadResponseListener() != null) {
+                        request.getDownloadResponseListener().onDownloadFailed(request, errorCode, errorMsg);
                     }
                 }
             });
@@ -79,8 +79,8 @@ public class EzDownloadRequestQueue {
         public void postProgressUpdate(final EzDownloadRequest request, final long totalBytes, final long downloadedBytes, final int progress) {
             mCallBackExecutor.execute(new Runnable() {
                 public void run() {
-                    if (request.getStatusListener() != null) {
-                        request.getStatusListener().onProgress(request, totalBytes, downloadedBytes, progress);
+                    if (request.getDownloadResponseListener() != null) {
+                        request.getDownloadResponseListener().onProgress(request, totalBytes, downloadedBytes, progress);
                     }
                 }
             });

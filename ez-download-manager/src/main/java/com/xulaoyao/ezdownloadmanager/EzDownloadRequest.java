@@ -58,9 +58,7 @@ public class EzDownloadRequest implements Comparable<EzDownloadRequest> {
 
     private EzDownloadRequestQueue mRequestQueue;
 
-    //private DownloadStatusListener mDownloadListener;
-
-    private IEzDownloadResponseListener mDownloadStatusListener;
+    private IEzDownloadResponseListener mDownloadResponseListener;
 
     private Object mDownloadContext;
 
@@ -159,18 +157,18 @@ public class EzDownloadRequest implements Comparable<EzDownloadRequest> {
      *
      * @return the status listener
      */
-    IEzDownloadResponseListener getStatusListener() {
-        return mDownloadStatusListener;
+    IEzDownloadResponseListener getDownloadResponseListener() {
+        return mDownloadResponseListener;
     }
 
     /**
      * Sets the status listener for this download request. Download manager sends progress,
      * failure and completion updates to this listener for this download request.
      *
-     * @param downloadStatusListener the status listener for this download
+     * @param downloadResponseListener the status listener for this download
      */
-    public EzDownloadRequest setStatusListener(IEzDownloadResponseListener downloadStatusListener) {
-        mDownloadStatusListener = downloadStatusListener;
+    public EzDownloadRequest setDownloadResponseListener(IEzDownloadResponseListener downloadResponseListener) {
+        mDownloadResponseListener = downloadResponseListener;
         return this;
     }
 
@@ -279,4 +277,7 @@ public class EzDownloadRequest implements Comparable<EzDownloadRequest> {
                 this.mDownloadId - otherEzDownloadRequest.mDownloadId :
                 right.ordinal() - left.ordinal();
     }
+
+
+
 }

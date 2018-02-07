@@ -1,4 +1,4 @@
-package com.xulaoyao.ezdownloadmanager;
+package com.xulaoyao.ezdownloadmanager.demo;
 
 import org.junit.Test;
 
