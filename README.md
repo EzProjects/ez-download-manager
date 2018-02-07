@@ -106,3 +106,8 @@ thin, thin, super thin
 
 ## No Permissions Required
   * Unless if you specify download destination to be in external public SDCard location.You might need *android.permission.WRITE_EXTERNAL_STORAGE* permission.
+  
+  ```xml
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  ```
