@@ -1,1 +1,1 @@
-include ':app', ':ez-download-manager'
+include ':ez-download-manager', ':demo'
